@@ -1,16 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.AI;
 
-public class OtherTest : MonoBehaviour
+public class Score : MonoBehaviour
 {
-    [SerializeField] float amount;
+    TMP_Text myText;
+    int score;
     // Start is called before the first frame update
-
-    public float Amount
-    {
-        get { return amount; }
-    }
     void Start()
     {
         
@@ -20,5 +18,10 @@ public class OtherTest : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddPoints(int amount)
+    {
+        score += amount;
     }
 }
