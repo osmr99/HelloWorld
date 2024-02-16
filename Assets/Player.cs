@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         myScore = FindObjectOfType<Score>();
+        //Destroy(gameObject, 1);
     }
 
     // Update is called once per frame
@@ -16,7 +17,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            myScore.AddPoints(1);
+            myScore.Points += 1;
         }
     }
 }
